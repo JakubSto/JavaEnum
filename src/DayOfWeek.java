@@ -37,18 +37,19 @@ public enum DayOfWeek {
     public static ArrayList weekendDays(){
         ArrayList<DayOfWeek> tempDaysList = new ArrayList<>();
         for (DayOfWeek day: DayOfWeek.values()) {
-            if (day.workDay){
+            if (!day.workDay){
                 tempDaysList.add(day);
             }
         }
         return tempDaysList;
     }
 
-    public static ArrayList polishNameDays(){
-        ArrayList<String> tempDaysList = new ArrayList<>();
+    public static DayOfWeek searchByPolishName(String polishNameDay){
         for (DayOfWeek day: DayOfWeek.values()) {
-            tempDaysList.add(day.polishName);
+
+            if(day.polishName.equals(polishNameDay));
+            return day;
         }
-        return tempDaysList;
+        return null;
     }
 }

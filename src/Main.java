@@ -1,7 +1,7 @@
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println(DayOfWeek.polishNameDays());
+        System.out.println((DayOfWeek.searchByPolishName("Poniedziałek").getPolishName()));
         System.out.println(DayOfWeek.weekendDays());
         System.out.println(DayOfWeek.workDays());
 
