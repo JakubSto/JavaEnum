@@ -11,11 +11,7 @@ public enum DayOfWeek {
 
     private String polishName;
     private boolean workDay;
-    ArrayList<DayOfWeek> workDayList = new ArrayList<>();
-    ArrayList<DayOfWeek> weekendsDayList = new ArrayList<>();
-    ArrayList<String> polishNameDaysList = new ArrayList<>();
-
-
+  
     DayOfWeek(String polishName, boolean workDay){
         this.polishName = polishName;
         this.workDay = workDay;
