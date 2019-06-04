@@ -20,7 +20,6 @@ public enum DayOfWeek {
     public String getPolishName() {
         return polishName;
     }
-
     public boolean isWorkDay() {
         return workDay;
     }
@@ -47,9 +46,14 @@ public enum DayOfWeek {
     public static DayOfWeek searchByPolishName(String polishNameDay){
         for (DayOfWeek day: DayOfWeek.values()) {
 
-            if(day.polishName.equals(polishNameDay));
+            if(day.polishName.equals(polishNameDay))
             return day;
+            else
+            return day = null;
         }
+
+
+
         return null;
     }
 }
