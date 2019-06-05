@@ -7,7 +7,14 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         String days = scanner.nextLine();
 
-        System.out.println((DayOfWeek.searchByPolishName(days).getPolishName()));
+        try {
+            System.out.println((DayOfWeek.searchByPolishName(days).getPolishName()));
+        }
+        catch(Exception ex){
+            System.out.println("Error: " + ex.getMessage());
+        }
+
+
         System.out.println(DayOfWeek.weekendDays());
         System.out.println(DayOfWeek.workDays());
 
