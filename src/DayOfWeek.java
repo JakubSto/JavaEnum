@@ -46,7 +46,7 @@ public enum DayOfWeek {
 
     public static DayOfWeek searchByPolishName(String polishNameDay) {
         for (DayOfWeek day : DayOfWeek.values()) {
-            if (day.polishName.equals(polishNameDay))
+            if (day.polishName.toLowerCase().equals(polishNameDay.toLowerCase()))
                 return day;
         }
         throw new IllegalArgumentException("Day not found");
