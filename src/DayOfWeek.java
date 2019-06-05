@@ -6,13 +6,13 @@ public enum DayOfWeek {
     WEDNESDAY("środa", true),
     THURSDAY("Czwartek", true),
     FRIDAY("Piątek", true),
-    SATURDAY("Sobota",false),
+    SATURDAY("Sobota", false),
     SUNDAY("Niedziela", false);
 
     private String polishName;
     private boolean workDay;
 
-    DayOfWeek(String polishName, boolean workDay){
+    DayOfWeek(String polishName, boolean workDay) {
         this.polishName = polishName;
         this.workDay = workDay;
     }
@@ -20,36 +20,36 @@ public enum DayOfWeek {
     public String getPolishName() {
         return polishName;
     }
+
     public boolean isWorkDay() {
         return workDay;
     }
 
-    public static ArrayList workDays(){
+    public static ArrayList workDays() {
         ArrayList<DayOfWeek> tempDaysList = new ArrayList<>();
-        for (DayOfWeek day: DayOfWeek.values())
+        for (DayOfWeek day : DayOfWeek.values())
             if (day.workDay) {
                 tempDaysList.add(day);
             }
         return tempDaysList;
     }
 
-    public static ArrayList weekendDays(){
+    public static ArrayList weekendDays() {
         ArrayList<DayOfWeek> tempDaysList = new ArrayList<>();
-        for (DayOfWeek day: DayOfWeek.values()) {
-            if (!day.workDay){
+        for (DayOfWeek day : DayOfWeek.values()) {
+            if (!day.workDay) {
                 tempDaysList.add(day);
             }
         }
         return tempDaysList;
     }
 
-    public static DayOfWeek searchByPolishName(String polishNameDay){
-        for (DayOfWeek day: DayOfWeek.values()) {
-
-            if(day.polishName.equals(polishNameDay))
-            return day;
+    public static DayOfWeek searchByPolishName(String polishNameDay) {
+        for (DayOfWeek day : DayOfWeek.values()) {
+            if (day.polishName.equals(polishNameDay))
+                return day;
         }
-
         return null;
+
     }
 }
