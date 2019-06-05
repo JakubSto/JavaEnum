@@ -49,7 +49,6 @@ public enum DayOfWeek {
             if (day.polishName.equals(polishNameDay))
                 return day;
         }
-        return null;
-
+        throw new IllegalArgumentException("Day not found");
     }
 }
