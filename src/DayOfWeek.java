@@ -45,8 +45,11 @@ public enum DayOfWeek {
     }
 
     public static DayOfWeek searchByPolishName(String polishNameDay) {
+        if (polishNameDay==null)
+            throw new NullPointerException("Argument of method is Null");
+
         for (DayOfWeek day : DayOfWeek.values()) {
-            if (day.polishName.toLowerCase().equals(polishNameDay.toLowerCase()))
+            if (day.polishName.equalsIgnoreCase(polishNameDay))
                 return day;
         }
         throw new IllegalArgumentException("Day not found");
