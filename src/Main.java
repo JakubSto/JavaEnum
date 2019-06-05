@@ -7,9 +7,6 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         String days = scanner.nextLine();
 
-        if (DayOfWeek.searchByPolishName(days).equals(null))
-            throw new NullPointerException("Not found day");
-
         System.out.println((DayOfWeek.searchByPolishName(days).getPolishName()));
         System.out.println(DayOfWeek.weekendDays());
         System.out.println(DayOfWeek.workDays());
